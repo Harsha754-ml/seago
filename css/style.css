@@ -110,15 +110,20 @@ header.nav{
   background:#000;
   border-bottom:1px solid rgba(255,255,255,.08); transition:box-shadow .3s;
 }
-.nav-row{ display:flex; align-items:center; justify-content:space-between; height:80px; }
-.nav-logo{ display:flex; align-items:center; }
+header.nav .wrap{
+  max-width:100%;
+  width:100%;
+  padding:0 clamp(20px, 3vw, 48px);
+}
+.nav-row{ display:flex; align-items:center; justify-content:space-between; height:80px; width:100%; }
+.nav-logo{ display:flex; align-items:center; flex-shrink:0; margin-left:clamp(16px, 2vw, 36px); }
 .nav-logo img{ height:52px; width:auto; max-height:100%; object-fit:contain; }
-.nav-links{ display:flex; align-items:center; gap:22px; margin-left:auto; margin-right:16px; }
-.nav-links a{ color:#CBD5E5; font-size:14px; font-weight:500; transition:color .2s; position:relative; }
+.nav-links{ display:flex; align-items:center; gap:26px; margin-left:auto; margin-right:24px; }
+.nav-links a{ color:#CBD5E5; font-size:14.5px; font-weight:500; transition:color .2s; position:relative; }
 .nav-links a::after{ content:''; position:absolute; left:0; bottom:-6px; width:0; height:1.5px; background:var(--blue-2); transition:width .25s; }
 .nav-links a:hover{ color:#fff; }
 .nav-links a:hover::after{ width:100%; }
-.nav-cta{ display:flex; align-items:center; gap:14px; }
+.nav-cta{ display:flex; align-items:center; gap:14px; flex-shrink:0; }
 .burger{ display:none; width:42px; height:42px; border-radius:10px; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.04); align-items:center; justify-content:center; flex-direction:column; gap:4px; cursor:pointer; }
 .burger span{ width:18px; height:1.6px; background:#fff; display:block; transition:transform .3s, opacity .3s; }
 .burger.open span:nth-child(1){ transform:translateY(5.6px) rotate(45deg); }
@@ -453,11 +458,16 @@ footer{ background:var(--navy); color:#B9C3D4; padding:76px 0 30px; margin-top:4
   .stat-strip{ gap:34px 44px; }
 }
 @media (max-width:720px){
-  .wrap{ padding:0 20px; }
-  .nav-logo img{ height:42px; }
+  header.nav .wrap{ padding:0 18px; }
+  .nav-row{ height:70px; }
+  .nav-logo{ margin-left:6px; }
+  .nav-logo img{ height:38px; }
   .nav-links{ display:none; }
-  .nav-cta .btn-ghost{ display:none; }
+  .nav-cta .btn{ display:none; }
   .burger{ display:flex; }
+  .mobile-menu{ inset:70px 0 0 0; padding:28px 20px; }
+  .mobile-menu .btn{ width:100%; justify-content:center; }
+  .wrap{ padding:0 20px; }
   .grid-4{ grid-template-columns:1fr 1fr; }
   .hero{ padding:100px 0 56px; }
   .hero-stats{ gap:30px 34px; }
