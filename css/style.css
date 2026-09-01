@@ -68,6 +68,7 @@ a{text-decoration:none; color:inherit;}
 .photo-frame img.inboard-image{ object-fit:contain; background:#101113; }
 .photo-frame:has(.inboard-image), .card:has(.inboard-image) .ph{ background:#101113 !important; }
 .photo-frame img.battery-image{ object-fit:cover; object-position:center; }
+.photo-frame img.hydrogen-image{ object-fit:cover; object-position:center; }
 .case-gallery{ position:relative; }
 .case-gallery img{ position:absolute; inset:0; opacity:0; transition:opacity .8s ease; }
 .case-gallery img.is-active{ opacity:1; }
@@ -343,6 +344,9 @@ footer{ background:var(--navy); color:#B9C3D4; padding:76px 0 30px; margin-top:4
 .product-media .ph{ aspect-ratio:4/5; }
 #inboard .product-media .ph,
 .product-media:has(.inboard-image) .ph{ aspect-ratio:1282/878; background:#101113; }
+#hydrogen .product-media .ph,
+.product-media:has(.hydrogen-image) .ph,
+.ph:has(.hydrogen-image){ aspect-ratio:1372/908; }
 .product-copy .case-tag{ margin-bottom:14px; }
 .product-copy h2{ font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,3.4vw,38px); font-weight:700; letter-spacing:-0.01em; margin-bottom:18px; }
 .product-copy > p{ color:var(--slate); font-size:15.5px; line-height:1.8; margin-bottom:30px; max-width:520px; }
